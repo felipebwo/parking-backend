@@ -51,7 +51,6 @@ class WebhookService(
         val occupancyPercent = (occupied.toDouble() / totalSpots.toDouble()) * 100.0
         val multiplier = billingService.applyDynamicMultiplier(occupancyPercent)
 
-        // Converte entryTime do DTO para UTC ou usa Instant.now() se nulo
         val entryTime = dto.entry_time?.let {
             val ldt = java.time.LocalDateTime.parse(it)
             ldt.atZone(java.time.ZoneId.of("UTC")).toInstant()
@@ -107,7 +106,6 @@ class WebhookService(
         val session = sessionRepo.findByLicensePlateAndExitTimeIsNull(license)
             ?: throw IllegalStateException("No open session No available spots for entryfor vehicle")
 
-        // Converte exitTime do DTO para UTC ou usa Instant.now()
         val exitTime = dto.exit_time?.let {
             val ldt = java.time.LocalDateTime.parse(it)
             ldt.atZone(java.time.ZoneId.of("UTC")).toInstant()
@@ -126,7 +124,6 @@ class WebhookService(
         val amount = billingService.calculateAmount(session.entryTime ?: exitTime, exitTime, pricePerHour)
         System.out.printf("Amount: $amount")
         session.amount = amount
-
 
         // Libera a vaga
         session.spotId?.let {

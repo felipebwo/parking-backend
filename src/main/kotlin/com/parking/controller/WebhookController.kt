@@ -11,7 +11,7 @@ class WebhookController(private val webhookService: WebhookService) {
     @PostMapping("/webhook")
     fun handleWebhook(@RequestBody dto: WebhookDto): ResponseEntity<String> {
         return try {
-            System.out.printf("Received event...");
+            System.out.printf("Received Event - ${dto.event_type.uppercase()}");
             webhookService.process(dto)
             ResponseEntity.ok("OK")
         } catch (e: IllegalStateException) {

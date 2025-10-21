@@ -27,6 +27,7 @@ class GarageInitializer(
     @PostConstruct
     fun init() {
         try {
+            //Get infos and start simulator
             val rest = RestTemplate()
             val url = "http://localhost:3000/garage" // simulator endpoint
             log.info("Attempting to fetch garage config from $url (simulator)")
@@ -42,6 +43,7 @@ class GarageInitializer(
 
             val mapper = jacksonObjectMapper()
             val cfg: GarageConfigDto = mapper.readValue(resp)
+
             // create a Garage root entry (one garage)
             val garage = Garage(name = "simulated-garage", basePrice = BigDecimal.ZERO, maxCapacity = cfg.spots?.size ?: 0)
             val savedGarage = garageRepo.save(garage)

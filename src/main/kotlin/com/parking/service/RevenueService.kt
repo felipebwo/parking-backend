@@ -33,7 +33,6 @@ class RevenueService(
         }
     }
 
-
     fun queryRevenue(sector: String?, dateString: String): BigDecimal {
         val date = LocalDate.parse(dateString)
 
