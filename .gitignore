@@ -60,3 +60,41 @@ target/classes/META-INF/parking.kotlin_module
 .idea/misc.xml
 
 .idea/vcs.xml
+
+target/test-classes/com/parking/service/BillingServiceTest.class
+
+target/test-classes/com/parking/service/RevenueServiceTest.class
+
+target/test-classes/com/parking/service/RevenueServiceTest$should insert new revenue when no existing record$$inlined$check$1.class
+
+target/test-classes/com/parking/service/RevenueServiceTest$should update existing revenue amount$$inlined$check$1.class
+
+target/test-classes/com/parking/service/WebhookServiceTest.class
+
+target/test-classes/com/parking/service/WebhookServiceTest$should insert new revenue when no existing record (simulating EXIT webhook)$$inlined$check$1.class
+
+target/test-classes/com/parking/service/WebhookServiceTest$should update existing revenue amount for same sector and date$$inlined$check$1.class
+
+target/test-classes/META-INF/parking.kotlin_module
+
+target/maven-archiver/pom.properties
+
+target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+
+target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst
+
+target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst
+
+target/parking-0.0.1-SNAPSHOT.jar
+
+target/surefire-reports/com.parking.service.BillingServiceTest.txt
+
+target/surefire-reports/com.parking.service.RevenueServiceTest.txt
+
+target/surefire-reports/com.parking.service.WebhookServiceTest.txt
+
+target/surefire-reports/TEST-com.parking.service.BillingServiceTest.xml
+
+target/surefire-reports/TEST-com.parking.service.RevenueServiceTest.xml
+
+target/surefire-reports/TEST-com.parking.service.WebhookServiceTest.xml
