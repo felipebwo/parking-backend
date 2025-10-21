@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS parking_sessions (
   parked_time DATETIME,
   exit_time DATETIME,
   amount DECIMAL(10,2) DEFAULT 0,
-  dynamic_multiplier DECIMAL(5,2) DEFAULT 0;
+  dynamic_multiplier DECIMAL(5,2) DEFAULT 0
 );
 
 CREATE TABLE IF NOT EXISTS revenue (
