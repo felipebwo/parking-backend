@@ -41,7 +41,7 @@ class RevenueService(
             return list.fold(BigDecimal.ZERO) { acc, rev -> acc.add(rev.amount) }
         } else {
             val revenue = revenueRepo.findBySectorAndDate(sector!!, date)
-            return (revenue?.amount ?: 0) as BigDecimal
+            return revenue?.amount ?: BigDecimal.ZERO
         }
     }
 }

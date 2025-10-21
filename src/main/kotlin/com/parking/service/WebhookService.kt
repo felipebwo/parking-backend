@@ -122,7 +122,7 @@ class WebhookService(
 
         // Calcula valor da sessão (primeiros 30min grátis, arredondamento para cima)
         val amount = billingService.calculateAmount(session.entryTime ?: exitTime, exitTime, pricePerHour)
-        System.out.printf("Amount: $amount")
+        println("Amount: $amount")
         session.amount = amount
 
         // Libera a vaga
