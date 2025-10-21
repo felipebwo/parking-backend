@@ -48,3 +48,15 @@ target/classes/com/parking/service/RevenueService.class
 target/classes/com/parking/service/WebhookService.class
 
 target/classes/META-INF/parking.kotlin_module
+
+.idea/compiler.xml
+
+.idea/encodings.xml
+
+.idea/jarRepositories.xml
+
+.idea/kotlinc.xml
+
+.idea/misc.xml
+
+.idea/vcs.xml
